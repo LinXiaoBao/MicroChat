@@ -2,7 +2,9 @@
     <div class="essay-wrap">
         <el-row class="esy-header" :gutter="10">
             <el-col :span="2">
-                <img class="avator" src="../img/avator.png" />
+                <div class="avator-wrap">
+                    <img class="avator" src="../img/user1.jpeg" />
+                </div>
             </el-col>
             <el-col :span="22">
                 <el-row class="name-date">
@@ -57,9 +59,15 @@
     border: 1px solid #eee;
     border-radius: 5px;
     .esy-header{
-        .avator{
-            width: 100%;
+        .avator-wrap{
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            .avator{
+                width: 100%;
+            }
         }
+
         .esy-title{
             margin-top: 8px; 
         }
@@ -67,6 +75,7 @@
     .esy-body{
         font-size: 14px;
         line-height: 1.5;
+        margin: 10px 0;
     }
     .esy-footer{
         margin: 10px 0 0;

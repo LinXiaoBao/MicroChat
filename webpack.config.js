@@ -37,6 +37,7 @@ module.exports = {
         })
     ],
     devServer: {
+        stats: 'errors-only',
         contentBase: 'dist/',
         hot: true,
         inline: true,
