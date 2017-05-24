@@ -8,7 +8,7 @@
             </el-col>
             <el-col :span='18'>
                 <div class="grid-content">
-                    <essay v-for="item in [1,1,1,1]"></essay>
+                    <essay v-for="item in [1,1,1]"></essay>
                 </div>
             </el-col>
         </el-row>
