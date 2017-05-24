@@ -5,15 +5,13 @@
             <div class="sign-box">
                 <el-form label-position="right" label-width="0px">
                     <el-form-item label="">
-                        <el-input placeholder="请输入用户名或邮箱"></el-input>
+                        <el-input placeholder="请输入用户名或邮箱" v-model="userInfo.emailOrUsername"></el-input>
                     </el-form-item>
                     <el-form-item label="">
-                        <el-input type="password" placeholder="请输入密码"></el-input>
+                        <el-input type="password" placeholder="请输入密码" v-model="userInfo.password"></el-input>
                     </el-form-item>
                     <el-form-item label="">
-	                    <router-link :to="{name: 'home'}">
-	                		<el-button type="primary" class="btn-flat"> 登录</el-button>
-	            		</router-link>
+	                    <el-button type="primary" class="btn-flat" @click="login"> 登录</el-button>
                     </el-form-item>
                 </el-form>
 
@@ -27,3 +25,31 @@
         </div>
     </div>
 </template>
+
+<script>
+import http from '../common/http.js'
+
+export default {
+	data() {
+		return {
+			userInfo: {
+				emailOrUsername: '',
+				password: ''
+			}
+		}
+	},
+	methods: {
+		login() {
+			http({
+				vm: this,
+				api: 'login',
+				data: this.userInfo,
+			}).then((res) => {
+				this.$router.push({name: 'home'});
+			}).catch((err) => {
+				
+			});
+		}
+	}
+}
+</script>
