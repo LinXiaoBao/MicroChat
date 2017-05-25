@@ -10,7 +10,7 @@ export default function http(req) {
     return new Promise(function (resolve, reject) {
         setTimeout(function(){
             Vue.http.post(api[req.api], req.data).then((res) => {
-                if (/^2\d{2}$/.test(res.body.errorCode)) {
+                if (res.body.success) {
                     resolve(res.body);
                 } else {
                     if(req.vm){
