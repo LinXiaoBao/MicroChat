@@ -47,6 +47,7 @@ module.exports = {
         proxy: {
             '/server/**': {
                 target: 'http://localhost:3001',
+                pathRewrite: {'^/server' : ''},
                 changeOrigin: true
             }
         },
