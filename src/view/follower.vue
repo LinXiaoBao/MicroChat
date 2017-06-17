@@ -1,14 +1,19 @@
 <template>
     <div>
         <el-row :gutter='20'>
-            <el-col :span='4'>
+            <el-col :span='6'>
                 <sidebar></sidebar>
             </el-col>
-            <el-col :span='20'>
+            <el-col :span='18'>
+                <div class="breadcrumb-wrap">
+                        <el-breadcrumb separator="/">
+                        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                        <el-breadcrumb-item>我的粉丝</el-breadcrumb-item>
+                    </el-breadcrumb>
+                </div>
                 <el-row :gutter='20'>
                     <template v-for="item in list">
                         <usercard :userInfo="item" type="follower"></usercard>
-                    
                     </template>
                 </el-row>
             </el-col>

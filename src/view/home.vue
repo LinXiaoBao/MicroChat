@@ -1,10 +1,10 @@
 <template>
     <div>
         <el-row :gutter='20'>
-            <el-col :span='4'>
+            <el-col :span='6'>
                 <sidebar></sidebar>
             </el-col>
-            <el-col :span='20'>
+            <el-col :span='18'>
                 <div class="grid-content" v-loading.body="loading">
                     <essay v-for="item in list" :essay="item"></essay>
                 </div>

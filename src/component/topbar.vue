@@ -22,7 +22,12 @@
                 </el-col>
                 <el-col :span="6">
                     <div class="search-wrap">
-                        <el-input placeholder="请填入搜索内容" icon="search" v-model="searchContent" :on-icon-click="searchIconClick">
+                        <el-input 
+                            placeholder="请填入搜索内容" 
+                            icon="search" 
+                            v-model="searchContent" 
+                            @keyup.enter.native="searchIconClick"
+                            :on-icon-click="searchIconClick">
                         </el-input>
                     </div>
                 </el-col>

@@ -49,7 +49,7 @@ const routes = [{
         path: 'follower',
         component: follower,
         name: 'follower'
-    },,{
+    },{
         path: 'following',
         component: following,
         name: 'following'

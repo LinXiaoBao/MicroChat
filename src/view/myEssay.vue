@@ -1,10 +1,16 @@
 <template>
     <div>
         <el-row :gutter='20'>
-            <el-col :span='4'>
+            <el-col :span='6'>
                 <sidebar></sidebar>
             </el-col>
-            <el-col :span='20'>
+            <el-col :span='18'>
+                <div class="breadcrumb-wrap">
+                        <el-breadcrumb separator="/">
+                        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                        <el-breadcrumb-item>我的文章</el-breadcrumb-item>
+                    </el-breadcrumb>
+                </div>
                 <div class="grid-content">
                     <essay v-for="item in list" :essay="item"></essay>
                 </div>

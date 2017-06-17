@@ -1,10 +1,10 @@
 <template>
     <div>
         <el-row :gutter='20'>
-            <el-col :span='4'>
+            <el-col :span='6'>
                 <sidebar></sidebar>
             </el-col>
-            <el-col :span='20'>
+            <el-col :span='18'>
                 <div class="grid-content">
                 <p>用户详情</p>
                 </div>

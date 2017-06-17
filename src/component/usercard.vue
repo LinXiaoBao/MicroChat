@@ -56,6 +56,7 @@ export default {
 					"userId": this.userInfo.userId
 				}
             }).then((res) => {
+                this.$store.dispatch('fetchProfileList');
                 this.$store.dispatch(this.typeMap[this.type]).then(() => {
                     this.isLoading = false;
                 }).catch(() => {
@@ -74,6 +75,7 @@ export default {
 					"userId": this.userInfo.userId
 				}
             }).then((res) => {
+                this.$store.dispatch('fetchProfileList');
                 this.$store.dispatch(this.typeMap[this.type]).then(() => {
                     this.isLoading = false;
                 }).catch(() => {

@@ -1,10 +1,16 @@
 <template>
     <div>
         <el-row :gutter='20'>
-            <el-col :span='4'>
+            <el-col :span='6'>
                 <sidebar></sidebar>
             </el-col>
-            <el-col :span='14' :offset="1">
+            <el-col :span='18'>
+                <div class="breadcrumb-wrap">
+                        <el-breadcrumb separator="/">
+                        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                        <el-breadcrumb-item>设置</el-breadcrumb-item>
+                    </el-breadcrumb>
+                    </div>
                 <div class="settingUserInfo clearfix">
                     <h2>重置个人信息</h2>
                     <div style="margin: 20px 0;"></div>

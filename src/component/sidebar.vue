@@ -5,10 +5,33 @@
             <div class="user-info">
             	<h1 class="text-center">{{this.list.username}}</h1>
             	<p class="signature silver">{{this.list.signature}}</p>
-            	<p @click="follower">我的粉丝 
-                    <span>{{this.list.followingNum}}</span></p>
-            	<p @click="following">我的关注    
-                    <span>{{this.list.followerNum}}</span></p>
+            	
+                <el-row>
+                    <el-col :span="12">
+                        <p>
+                            <label class="silver">
+                                我的粉丝
+                            </label>
+                            <strong>
+                                <router-link :to="{name: 'follower'}">
+                                    {{this.list.followerNum}}
+                                </router-link>
+                            </strong>
+                        </p>
+                    </el-col>
+                    <el-col :span="12">
+                        <p>
+                            <label class="silver">
+                                我的关注
+                            </label>
+                            <strong>
+                                <router-link :to="{name: 'following'}">
+                                    {{this.list.followingNum}}
+                                </router-link>
+                            </strong>
+                        </p>
+                    </el-col>
+                </el-row>
 
             </div>
         </div>
