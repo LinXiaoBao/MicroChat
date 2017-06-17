@@ -38,6 +38,11 @@ export default {
 			}
 		}
 	},
+    created() {
+        if(localStorage.getItem('userId')){
+            this.$router.push({name: 'home'});
+        }
+    },
 	methods: {
 		login() {
 			http({

@@ -10,7 +10,10 @@
                         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
                         <el-breadcrumb-item>我的关注</el-breadcrumb-item>
                     </el-breadcrumb>
-                    </div>
+                </div>
+                <h2 class="silver-extra-light text-center no-data">
+                    ～老铁，快去关注好友吧～
+                </h2>
                 <el-row :gutter='20'>
                     <template v-for="item in list">
                         <usercard :userInfo="item" type="following"></usercard>

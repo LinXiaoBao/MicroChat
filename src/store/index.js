@@ -27,6 +27,10 @@ const store = new Vuex.Store({
             localStorage.setItem('searchKey', searchKey);
             state.searchKey = searchKey;
         },
+        removeSearchKey(state) {
+            localStorage.removeItem('searchKey');
+            state.searchKey = '';
+        },
         setFollowerList(state, list) {
             state.followerList = list;
         },

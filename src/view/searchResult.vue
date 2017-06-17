@@ -12,6 +12,9 @@
                     </el-breadcrumb>
                 </div>
                 <el-row :gutter='20'>
+                    <h2 class="silver-extra-light text-center">
+                        ～本宝宝什么都没有找到～
+                    </h2>
                     <template v-for="item in list">
                         <usercard :userInfo="item" type="search"></usercard>
                     </template>

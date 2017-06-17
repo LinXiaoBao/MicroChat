@@ -5,6 +5,9 @@
                 <sidebar></sidebar>
             </el-col>
             <el-col :span='18'>
+                <h2 class="silver-extra-light text-center no-data">
+                    ～贵圈好一片净土～
+                </h2>
                 <div class="grid-content" v-loading.body="loading">
                     <essay v-for="item in list" :essay="item"></essay>
                 </div>

@@ -11,6 +11,9 @@
                         <el-breadcrumb-item>我的粉丝</el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
+                <h2 class="silver-extra-light text-center no-data">
+                        ～扎心，一个粉丝都没有～
+                    </h2>
                 <el-row :gutter='20'>
                     <template v-for="item in list">
                         <usercard :userInfo="item" type="follower"></usercard>

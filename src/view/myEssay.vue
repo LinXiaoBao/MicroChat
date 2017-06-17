@@ -11,6 +11,9 @@
                         <el-breadcrumb-item>我的文章</el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
+                <h2 class="silver-extra-light text-center no-data">
+                    ～你真懒，啥都没写～
+                </h2>
                 <div class="grid-content">
                     <essay v-for="item in list" :essay="item"></essay>
                 </div>

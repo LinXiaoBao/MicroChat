@@ -10,7 +10,10 @@
                         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
                         <el-breadcrumb-item>我的收藏</el-breadcrumb-item>
                     </el-breadcrumb>
-                    </div>
+                </div>
+                <h2 class="silver-extra-light text-center no-data">
+                    ～你真懒，啥都没收藏～
+                </h2>
                 <div class="grid-content" v-loading.body="loading">
                     <essay v-for="item in list" :essay="item"></essay>
                 </div>

@@ -142,6 +142,13 @@ export default {
                 
             });
         }
+    },
+    watch: {
+        searchContent(newVal) {
+            if(!newVal.trim()) {
+                this.$store.commit('removeSearchKey');
+            }
+        }
     }
 }
 </script>

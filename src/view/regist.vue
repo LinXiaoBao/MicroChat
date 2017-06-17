@@ -92,6 +92,11 @@ export default {
             loadingRegist: false,
 		}
 	},
+    created() {
+        if(localStorage.getItem('userId')){
+            this.$router.push({name: 'home'});
+        }
+    },
 	methods: {
         // 验证码发送倒计时
         countdown () {
