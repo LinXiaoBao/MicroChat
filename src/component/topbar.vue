@@ -9,18 +9,13 @@
                 </el-col>
                 <el-col :span="11">
                     <div class="menu-wrap">
-                        <el-menu default-active="1" mode="horizontal">
-                            <el-menu-item index="1">
-                                <router-link :to="{name: 'home'}">首页</router-link>
-                            </el-menu-item>
-                            <el-menu-item index="2">
-                                <router-link :to="{name: 'write'}">写文章</router-link>
-                            </el-menu-item>
-                            <el-menu-item index="3">
-                                <router-link :to="{name: 'collection'}">我的收藏</router-link>
-                            </el-menu-item>
-                            <el-menu-item index="4">
-                                <router-link :to="{name: 'myEssay'}">我的文章</router-link>
+                        <el-menu :default-active="activeMenu" mode="horizontal">
+                            <el-menu-item
+                                v-for="(item, index) in menuList"
+                                :index="(index+1)+''">
+                                <router-link :to="{name: item.name}">
+                                    <div>{{item.title}}</div>
+                                </router-link>
                             </el-menu-item>
                         </el-menu>
                     </div>
@@ -62,12 +57,36 @@ export default {
     data(){
         return {
             searchContent: '',
+            menuList: [{
+                name: 'home',
+                title: '首页'
+            }, {
+                name: 'write',
+                title: '写文章'
+            }, {
+                name: 'collection',
+                title: '我的收藏'
+            }, {
+                name: 'myEssay',
+                title: '我的文章'
+            }],
             list:[]
         }
     },
     computed:{
-        profileList(){
+        profileList()   {
             return this.$store.state.profileList;
+        },
+        activeMenu() {
+            const curRouteName = this.$route.name;
+            let curRouteIndex = '1';
+
+            this.menuList.forEach((elem, index) => {
+                if(elem.name === curRouteName){
+                    curRouteIndex = (index + 1) + '';
+                }
+            });
+            return curRouteIndex;
         }
     },
     created() {
