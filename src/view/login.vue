@@ -45,6 +45,7 @@ export default {
 				api: 'login',
 				data: this.userInfo,
 			}).then((res) => {
+                localStorage.setItem('userId', res.data.userId);
 				this.$router.push({name: 'home'});
 			}).catch((err) => {
 				

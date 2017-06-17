@@ -12,6 +12,9 @@ import topbar from '../component/topbar.vue'
 export default {
     components: {
         topbar: topbar
+    },
+    created(){
+    	this.$store.dispatch('fetchProfileList');
     }
 }
 </script>

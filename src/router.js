@@ -11,6 +11,11 @@ const home = resolve => require(['./view/home.vue'], resolve);
 const write = resolve => require(['./view/write.vue'], resolve);
 const collection= resolve => require(['./view/collection.vue'], resolve);
 const myEssay= resolve => require(['./view/myEssay.vue'], resolve);
+const searchResult= resolve => require(['./view/searchResult.vue'], resolve);
+const userDetails= resolve => require(['./view/userDetails.vue'], resolve);
+const follower= resolve => require(['./view/follower.vue'], resolve);
+const following= resolve => require(['./view/following.vue'], resolve);
+const setting= resolve => require(['./view/setting.vue'],resolve);
 
 const routes = [{
     path: '/index',
@@ -32,6 +37,26 @@ const routes = [{
         path: 'myEssay',
         component: myEssay,
         name: 'myEssay'
+    },{
+        path: 'searchResult',
+        component: searchResult,
+        name: 'searchResult'
+    },{
+        path: 'userDetails',
+        component: userDetails,
+        name: 'userDetails'
+    },{
+        path: 'follower',
+        component: follower,
+        name: 'follower'
+    },,{
+        path: 'following',
+        component: following,
+        name: 'following'
+    },{
+        path: 'setting',
+        component: setting,
+        name: 'setting'
     }]
 }, {
     path: '/login',
